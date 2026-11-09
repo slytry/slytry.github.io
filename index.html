@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Никита Наумов — frontend-разработчик</title>
+  <meta name="description" content="Никита Наумов, frontend-разработчик: TypeScript, React, интерфейсы для больших продуктов.">
+  <meta property="og:title" content="Никита Наумов — frontend-разработчик">
+  <meta property="og:description" content="TypeScript, React, интерфейсы для больших продуктов.">
+  <meta property="og:url" content="https://nanaumov.ru/">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="https://nanaumov.ru/photo.jpg">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23e8590c'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3EНН%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbfaf7;
+      --text: #1d1c1a;
+      --muted: #6b6760;
+      --line: #e4e0d8;
+      --accent: #c2410c;
+      --accent-soft: rgba(194, 65, 12, 0.12);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #161514;
+        --text: #ecebe8;
+        --muted: #9c978f;
+        --line: #2f2d2a;
+        --accent: #fb923c;
+        --accent-soft: rgba(251, 146, 60, 0.16);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 18px/1.6 "Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 4.5rem 1.25rem 3rem;
+    }
+
+    header { margin-bottom: 3rem; }
+
+    .avatar {
+      display: block;
+      width: 7.5rem;
+      height: 7.5rem;
+      margin-bottom: 1.75rem;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 8vw, 3.4rem);
+      line-height: 1.05;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .role {
+      margin: 0.75rem 0 0;
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+
+    h2 {
+      margin: 3rem 0 1rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    p { margin: 0 0 1rem; }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.2em;
+      transition: background-color 0.15s, text-decoration-color 0.15s;
+    }
+    a:hover {
+      background: var(--accent-soft);
+      text-decoration-color: currentColor;
+    }
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .stack li {
+      padding: 0.2rem 0.65rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font: 0.85rem/1.6 "JetBrains Mono", ui-monospace, monospace;
+    }
+
+    .contacts {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .contacts li {
+      display: flex;
+      gap: 1rem;
+      padding: 0.3rem 0;
+    }
+    .contacts span {
+      flex: 0 0 6rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 4rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 30rem) {
+      body { font-size: 17px; }
+      .page { padding-top: 3rem; }
+      .contacts span { flex-basis: 5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <img class="avatar" src="photo.jpg" width="160" height="160" alt="Никита Наумов">
+      <h1>Никита Наумов</h1>
+      <p class="role">Frontend-разработчик</p>
+    </header>
+
+    <main>
+      <section>
+        <p>Делаю интерфейсы для больших продуктов в&nbsp;технологической компании. Пишу на&nbsp;TypeScript и&nbsp;React, слежу, чтобы интерфейс был быстрым, доступным и&nbsp;понятным, а&nbsp;код&nbsp;— таким, который удобно поддерживать команде.</p>
+        <p>Люблю аккуратную вёрстку, которая не&nbsp;ломается в&nbsp;разных браузерах и&nbsp;почтовых клиентах, и&nbsp;небольшие инструменты, которые экономят время.</p>
+      </section>
+
+      <section>
+        <h2>Стек</h2>
+        <ul class="stack">
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>HTML и CSS</li>
+          <li>Vite</li>
+          <li>Vitest</li>
+          <li>PWA</li>
+          <li>Go</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Контакты</h2>
+        <ul class="contacts">
+          <li><span>Telegram</span><a href="https://t.me/naumov99">@naumov99</a></li>
+          <li><span>Почта</span><a href="mailto:naumov99.rst@gmail.com">naumov99.rst@gmail.com</a></li>
+          <li><span>GitHub</span><a href="https://github.com/slytry">slytry</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>© 2026 Никита Наумов</footer>
+  </div>
+</body>
+</html>
